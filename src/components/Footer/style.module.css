@@ -1,0 +1,66 @@
+.footer {
+  padding: 0 48px 0 48px;
+  padding-bottom: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (max-width: 580px) {
+  .footer {
+    padding-top: 48px;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
+.text {
+  color: #9FA5B5;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.img {
+  width: 96px;
+}
+.img:hover {
+  cursor: pointer;
+}
+
+.madeByWagmi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; 
+}
+
+.followInfinity {
+  p {
+    margin: 10px 12px;
+  }
+
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .08);
+  border-radius: 8px;
+}
+
+.glow {
+  text-shadow: #0F91D5A3 0px 0px 12px;
+}
+
+.social {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, .16);
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.social:last-child {
+  margin-right: 6px;
+}

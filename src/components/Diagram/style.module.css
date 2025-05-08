@@ -1,0 +1,221 @@
+.diagram {
+  padding: 0 48px 0 48px;
+}
+@media screen and (max-width: 768px) {
+  .diagram {
+    padding: 0 16px 0 16px;
+  }
+}
+.diagramTitle {
+  color: #0F91D5;
+  text-shadow: 0px 0px 12px #0F91D5A3;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  margin-bottom: 64px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 61px;
+  position: relative;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+}
+.leftShadow {
+  width: 248px;
+}
+.diagramWrapper {
+  width: 460px;
+  position: relative;
+
+}
+@media screen and (max-width: 1200px) {
+  .diagramWrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .diagramWrapper {
+    width: 252px;
+  }
+}
+.rightShadow {
+  width: 248px;
+}
+@media screen and (max-width: 1400px) {
+  .leftShadow {
+    width: 150px;
+    height: 460px;
+  }
+  .rightShadow {
+    width: 150px;
+    height: 460px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .leftShadow {
+    display: none;
+  }
+  .rightShadow {
+    display: none;
+  }
+}
+.diagramInfoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 54px;
+}
+
+@media screen and (max-width: 1230px) {
+  .diagramInfoWrapper {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .diagramInfoWrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .diagramInfoWrapper {
+    flex-direction: column;
+    gap: 28px;
+    width: 80%;
+  }
+}
+.label {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  transition: transform .4s ease-in-out;
+}
+.label:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 768px) {
+  .label:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+}
+.labelText {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  white-space: nowrap;
+}
+.percentLabel {
+  position: absolute;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.percentLabelTr {
+  top: -6%;
+  left: 53%;  
+}
+
+.percentLabelLiq {
+  top: 20%;
+  left: 95%;
+}
+.percentLabelWag {
+  top: 75%;
+  left: 95%;
+}
+.percentLabelMin {
+  top: 75%;
+  left: -3%;
+}
+@media screen and (max-width: 768px) {
+  .percentLabelMin {
+    top: 78%;
+    left: -7%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .labels {
+    display: flex;
+    max-width: 358px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.totalWrapper {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 90px;
+}
+@media screen and (max-width: 580px) {
+.totalWrapper {
+  margin-bottom: 48px;
+}
+}
+.totalCount {
+  color: #0F91D5;
+  text-shadow: 0px 0px 12px #0F91D5A3;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: 1%;
+  text-align: center;
+}
+.totalText {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.more {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #0F91D529;
+  color: #9FA5B5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  width: fit-content;
+}
+.moreLink {
+  color: #0F91D5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-decoration: none;
+}
+.separator {
+  display: none;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+}
+@media screen and (max-width: 580px) {
+  .separator {
+    display: block;
+  }
+}

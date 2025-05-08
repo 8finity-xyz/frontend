@@ -1,0 +1,55 @@
+@font-face{
+  font-family: "monaco";
+  src: url("./assets/fonts/monaco.ttf") format('ttf'), url("./assets/fonts/monaco.woff") format('woff');
+  font-weight: 400;
+  font-style:normal;
+  /* font-display:swap; */
+}
+@font-face{
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Medium.ttf") format('ttf'), url("./assets/fonts/Inter-Medium.woff") format('woff');
+  font-weight: 500;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Bold.ttf") format('ttf'), url("./assets/fonts/Inter-Bold.ttf") format('woff');
+  font-weight: 700;
+  font-style:normal;
+  font-display:swap;
+}
+* {
+  outline: none !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgba(0, 0, 0, 1);
+  font-family: "Inter", sans-serif;
+  max-width: 1600px;
+  margin: 0 auto !important;
+  overflow-x: hidden !important;
+}
+/*body,html{*/
+/*  -webkit-user-select: none;*/
+/*  -moz-user-select: none;*/
+/*  -ms-user-select: none;*/
+/*  user-select: none;*/
+/*}*/
+div {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  /*user-select: none;*/
+}
+
+img{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+a,a:hover{
+  text-decoration: none;
+}

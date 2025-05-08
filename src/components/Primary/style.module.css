@@ -1,0 +1,214 @@
+.primary {
+  padding: 0 48px;
+  position: relative;
+  padding-top: 232px;
+  margin-bottom: 34px;
+}
+@media screen and (max-width: 768px) {
+  .primary {
+    padding-top: 172px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.primary__logo {
+  position: absolute;
+  z-index: -1;
+  top: 106px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 354px;
+}
+@media screen and (max-width: 768px) {
+  .primary__logo {
+    top: 74px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .primary__logo {
+    width: 100%;
+  }
+}
+.primary__title {
+  margin: 0;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: 1%;
+  text-align: center;
+}
+.primary__subtitle {
+  margin: 0 auto;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 768px) {
+  .primary__subtitle {
+    max-width: 250px;
+  }
+}
+.primary__wallet {
+  margin: 0 auto;
+  margin-bottom: 16px;
+  padding: 6px 6px 6px 12px;
+  background-color: #000000A3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .primary__wallet {
+    width: calc(100% - 32px);
+    max-width: 358px;
+  }
+}
+.primary__walletAddress {
+  color: #9FA5B5;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .primary__walletAddress {
+    width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+.primary__walletIcon {
+  display: block;
+  width: 24px;
+}
+.primary__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 112px;
+}
+@media screen and (max-width: 768px) {
+  .primary__buttons {
+    margin-bottom: 88px;
+  }
+}
+.primary__butBtn {
+  padding: 8px 28px;
+  border: none;
+  background-color: #0F91D5;
+  border: 1px solid #0F91D5;
+  box-shadow: 0px 0px 12px 0px #0F91D5A3;
+  border-radius: 12px;
+  color: #FFF;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  transition: all .24s linear;
+}
+.primary__butBtn:hover {
+  cursor: pointer;
+  background-color: #0d75a8;
+border: 1px solid #0F91D5;
+box-shadow: 0px 0px 12px 0px #0F91D5A3;
+
+}
+.primary__mineBtn {
+  padding: 8px 28px;
+  border: none;
+  background-color: #0F91D529;
+  border: 1px solid #0F91D5;
+  box-shadow: 0px 0px 12px 0px #0F91D5A3;
+  border-radius: 12px;
+  color: #0F91D5;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  transition: all .24s linear;
+}
+.primary__mineBtn:hover {
+  cursor: pointer;
+  background-color: #0F91D552;
+  border: 1px solid #0F91D5;
+  box-shadow: 0px 0px 12px 0px #0F91D5A3;
+  color: #0F91D5;
+}
+.primary__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 236px);
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 1280px) {
+  .primary__info {
+    width: calc(100% - 100px);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .primary__info {
+    width: 100%;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 0;
+  }
+}
+.primary__itemCount {
+  margin-bottom: 4px;
+  color: #0F91D5;
+  text-shadow: 0px 0px 12px #0F91D5A3;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: 1%;
+  text-align: center;  
+}
+.primary__itemTitle {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.bottomArrow {
+  display: block;
+  width: 36px;
+  margin: 0 auto;
+  animation-name: levitate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  .bottomArrow {
+    display: none;
+  }
+}
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
