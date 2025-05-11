@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import style from "./style.module.css";
 import logo from '../../assets/images/header-logo.svg';
 import { useNavigate } from "react-router-dom";
+import i18n from '../../i18n'; // Import i18n instance
 
 export default function Header() {
   const { t } = useTranslation();
@@ -11,6 +12,12 @@ export default function Header() {
     e.preventDefault();
     navigate('/feem')
   }
+
+  const changeLanguageHandler = () => {
+    const currentLanguage = i18n.language;
+    const targetLanguage = currentLanguage === 'en' ? 'zh' : 'en';
+    i18n.changeLanguage(targetLanguage);
+  };
 
   return (
     <header className={style.header}>
@@ -42,6 +49,10 @@ export default function Header() {
       </div>
       <button onClick={() => window.open('https://app.magpiefi.xyz/swap/sonic/S/sonic/8', '_blank')} type="button" className={style.header__button}>
         {t('header.buyButton')}
+      </button>
+      {/* Language Switcher Button */}
+      <button onClick={changeLanguageHandler} type="button" className={`${style.header__button} ${style.header__languageButton}`}>
+        {i18n.language === 'en' ? '中文' : 'English'}
       </button>
     </header>
   );
