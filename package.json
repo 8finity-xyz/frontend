@@ -7,19 +7,26 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "crowdin:upload": "crowdin upload sources --config crowdin.yml",
+    "crowdin:download": "crowdin download --config crowdin.yml"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "chart.js": "^4.4.8",
     "chartjs-plugin-datalabels": "^2.2.0",
+    "i18next": "^25.1.2",
+    "i18next-browser-languagedetector": "^8.1.0",
+    "i18next-http-backend": "^3.0.2",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.5.1",
     "react-router-dom": "^7.5.3",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@crowdin/cli": "^4.7.0",
     "@eslint/js": "^9.21.0",
     "@types/aos": "^3.0.7",
     "@types/react": "^19.0.10",

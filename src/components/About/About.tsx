@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import style from "./style.module.css";
 import aboutImg from '../../assets/images/about-img.png';
 import separator from '../../assets/images/separator.svg'
@@ -5,24 +6,20 @@ import separatorMobile from '../../assets/images/separator-mobile.svg'
 
 
 export default function About() {
+  const { t } = useTranslation();
 
   return (
     <section className={style.about}>
       <div className={style.aboutWrapper}>
         <img data-aos="fade" data-aos-duration="1000"  src={aboutImg} className={style.mainImage} alt="" />
         <div data-aos="fade" data-aos-duration="1000" className={style.textBlock}>
-          <p className={style.text}>{">"}WHAT IS INFINITY?</p>
+          <p className={style.text}>{t('about.whatIsInfinity')}</p>
           <p className={style.subtext}>
-            <b>Infinity (8)</b> is&nbsp;the first self-sustaining Proof-of-Work token
-            on&nbsp;Sonic built to&nbsp;hold and grow value&mdash;forever.
-            It&nbsp;fuses Bitcoin-style mining with a&nbsp;powerful economic
-            engine driven by&nbsp;Sonic&rsquo;s native FeeM&nbsp;mechanism.
+            <b>{t('about.description.part1')}</b>{t('about.description.part2')}
+            {t('about.description.part3')}
             <br />
             <br />
-            Built around the number 8&mdash;a symbol of&nbsp;infinite
-            potential&mdash;Infinity embraces the technical innovation made
-            possible only on&nbsp;Sonic to&nbsp;introduce a&nbsp;new kind
-            of&nbsp;store of&nbsp;value.
+            {t('about.description.part4')}
           </p>
         </div>
       </div>

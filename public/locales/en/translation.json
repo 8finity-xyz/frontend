@@ -1,0 +1,118 @@
+{
+  "_comment": "This is the default English translation file. It will be populated with keys as components are localized.",
+  "about": {
+    "whatIsInfinity": ">WHAT IS INFINITY?",
+    "description": {
+      "part1": "Infinity (8)",
+      "part2": " is the first self-sustaining Proof-of-Work token on Sonic built to hold and grow value—forever.",
+      "part3": " It fuses Bitcoin-style mining with a powerful economic engine driven by Sonic's native FeeM mechanism.",
+      "part4": "Built around the number 8—a symbol of infinite potential—Infinity embraces the technical innovation made possible only on Sonic to introduce a new kind of store of value."
+    }
+  },
+  "diagram": {
+    "title": ">TOKENOMICS",
+    "percentTreasury": "10%",
+    "percentLiquidity": "20%",
+    "percentWagmi": "24%",
+    "percentMining": "46%",
+    "labelTreasury": "Treasury",
+    "labelLiquidity": "Liquidity",
+    "labelWagmiCommunity": "WAGMI Community",
+    "labelMiningRewards": "Mining rewards",
+    "totalCount": "88,888,888",
+    "totalText": "Total supply",
+    "learnMoreText": "Learn more about Infinity in the ",
+    "learnMoreLink": "Manifesto"
+  },
+  "time": {
+    "justNow": "Just now",
+    "yearUnit": "y",
+    "monthUnit": "m",
+    "dayUnit": "d",
+    "hourUnit": "h",
+    "minuteUnit": "min",
+    "ago": "ago"
+  },
+  "feem": {
+    "title": "FeeM Dashboard",
+    "stats": {
+      "allTimeEarnings": "All-time Earnings",
+      "currentTreasurySize": "Current Treasury size",
+      "allTimeDeployments": "All-time Deployments"
+    },
+    "wallets": {
+      "treasuryTitle": "Treasury wallet:",
+      "burnTitle": "Burn wallet:"
+    },
+    "howItWorks": {
+      "title": ">HOW IT WORKS?",
+      "subtitle": "Every time someone mines INFINITY on Sonic, they pay a small gas fee. 90% of it flows into the FeeM treasury and is instantly reinvested back into the ecosystem through:",
+      "item1": "Market buybacks and burns",
+      "item2": "Voters Incentives to the Shadow pool to deepen liquidity"
+    },
+    "table": {
+      "header": {
+        "date": "Date",
+        "type": "Type",
+        "s": "S",
+        "usd": "USD",
+        "hash": "Hash"
+      },
+      "type": {
+        "incentives": "Shadow Incentive",
+        "buybackAndBurn": "Buyback & Burn",
+        "lp": "Add Liquidity"
+      },
+      "loadingMore": "Loading more..."
+    }
+  },
+  "footer": {
+    "madeBy": "Made by",
+    "follow": "Follow ",
+    "infinityGlow": "INFINTIY"
+  },
+  "header": {
+    "logoAlt": "logo infinity",
+    "nav": {
+      "feem": "FeeM",
+      "mine": "Mine",
+      "manifesto": "Manifesto"
+    },
+    "buyButton": "Buy"
+  },
+  "how": {
+    "title": ">HOW IT WORKS?",
+    "subtitle": "Infinity powers a flywheel between mining and value:",
+    "point1": "Miners use our open-source CLI Miner to earn $8 while burning gas with every successful transaction—generating clean, custom wallet addresses along the way.",
+    "point2": "90% of the gas fees go straight back into the ecosystem through automatic buybacks and bribes.",
+    "point3": "As price and liquidity grow, mining becomes even more attractive.",
+    "conclusion": "The more the community mines, the stronger the token gets—fueling a self-sustaining loop of demand and value."
+  },
+  "hashrate": {
+    "qhs": "QH/s",
+    "rhs": "RH/s",
+    "yhs": "YH/s",
+    "zhs": "ZH/s",
+    "ehs": "EH/s",
+    "phs": "PH/s",
+    "ths": "TH/s",
+    "ghs": "GH/s",
+    "mhs": "MH/s",
+    "khs": "KH/s",
+    "hs": "H/s"
+  },
+  "primary": {
+    "logoAlt": "logo infinity",
+    "title": "INFINITY",
+    "subtitle": "The first truly self-sustaining pow cryptocurrency",
+    "buyButton": "Buy",
+    "mineButton": "Mine",
+    "stats": {
+      "gasBurnt": "Gas burnt",
+      "holders": "Holders",
+      "fdv": "FDV",
+      "hashrate": "Hashrate"
+    },
+    "bottomArrowAlt": "bottom arrow"
+  }
+} 
