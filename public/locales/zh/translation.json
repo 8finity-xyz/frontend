@@ -1,0 +1,118 @@
+{
+  "_comment": "此文件为默认的中文翻译文件，其结构与英文翻译保持一致。",
+  "about": {
+    "whatIsInfinity": ">什么是 INFINITY？",
+    "description": {
+      "part1": "Infinity (8)",
+      "part2": " 是首个在 Sonic 上自我维持的工作量证明代币，旨在永久地保持并增值。",
+      "part3": " 它将比特币式挖矿与由 Sonic 原生 FeeM 机制驱动的强大经济引擎结合在一起。",
+      "part4": "围绕象征无限潜力的数字 8 设计，Infinity 借助仅在 Sonic 上才能实现的技术创新，引入了一种全新的价值存储方式。"
+    }
+  },
+  "diagram": {
+    "title": ">代币经济学",
+    "percentTreasury": "10%",
+    "percentLiquidity": "20%",
+    "percentWagmi": "24%",
+    "percentMining": "46%",
+    "labelTreasury": "金库",
+    "labelLiquidity": "流动性",
+    "labelWagmiCommunity": "WAGMI 社区",
+    "labelMiningRewards": "挖矿奖励",
+    "totalCount": "88,888,888",
+    "totalText": "总供应量",
+    "learnMoreText": "在 ",
+    "learnMoreLink": "宣言"
+  },
+  "time": {
+    "justNow": "刚刚",
+    "yearUnit": "年",
+    "monthUnit": "月",
+    "dayUnit": "天",
+    "hourUnit": "小时",
+    "minuteUnit": "分钟",
+    "ago": "前"
+  },
+  "feem": {
+    "title": "FeeM 仪表盘",
+    "stats": {
+      "allTimeEarnings": "累计收益",
+      "currentTreasurySize": "当前金库规模",
+      "allTimeDeployments": "累计部署"
+    },
+    "wallets": {
+      "treasuryTitle": "金库钱包：",
+      "burnTitle": "销毁钱包："
+    },
+    "howItWorks": {
+      "title": ">运作方式？",
+      "subtitle": "每当有人在 Sonic 上挖掘 INFINITY 时，他们都会支付少量 gas 费。其中 90% 流入 FeeM 金库，并立即通过以下方式重新投入生态系统：",
+      "item1": "市场回购并销毁",
+      "item2": "向 Shadow 池提供投票激励以加深流动性"
+    },
+    "table": {
+      "header": {
+        "date": "日期",
+        "type": "类型",
+        "s": "S",
+        "usd": "USD",
+        "hash": "哈希"
+      },
+      "type": {
+        "incentives": "Shadow 激励",
+        "buybackAndBurn": "回购并销毁",
+        "lp": "添加流动性"
+      },
+      "loadingMore": "加载更多..."
+    }
+  },
+  "footer": {
+    "madeBy": "制作者",
+    "follow": "关注 ",
+    "infinityGlow": "INFINTIY"
+  },
+  "header": {
+    "logoAlt": "infinity 标志",
+    "nav": {
+      "feem": "FeeM",
+      "mine": "挖矿",
+      "manifesto": "宣言"
+    },
+    "buyButton": "购买"
+  },
+  "how": {
+    "title": ">运作方式？",
+    "subtitle": "Infinity 在挖矿和价值之间驱动一个飞轮：",
+    "point1": "矿工使用我们的开源 CLI Miner 来赚取 $8，并在每笔成功交易中燃烧 gas，同时生成干净的自定义钱包地址。",
+    "point2": "90% 的 gas 费用通过自动回购和激励立即回流生态系统。",
+    "point3": "随着价格和流动性增长，挖矿变得更具吸引力。",
+    "conclusion": "社区挖得越多，代币越强——形成一个自我维持的需求与价值循环。"
+  },
+  "hashrate": {
+    "qhs": "QH/秒",
+    "rhs": "RH/秒",
+    "yhs": "YH/秒",
+    "zhs": "ZH/秒",
+    "ehs": "EH/秒",
+    "phs": "PH/秒",
+    "ths": "TH/秒",
+    "ghs": "GH/秒",
+    "mhs": "MH/秒",
+    "khs": "KH/秒",
+    "hs": "H/秒"
+  },
+  "primary": {
+    "logoAlt": "infinity 标志",
+    "title": "INFINITY",
+    "subtitle": "首个真正自我维持的 PoW 加密货币",
+    "buyButton": "购买",
+    "mineButton": "挖矿",
+    "stats": {
+      "gasBurnt": "已燃烧 gas",
+      "holders": "持有者",
+      "fdv": "完全稀释估值",
+      "hashrate": "算力"
+    },
+    "bottomArrowAlt": "下箭头"
+  }
+}

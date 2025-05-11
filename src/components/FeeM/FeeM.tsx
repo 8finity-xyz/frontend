@@ -10,6 +10,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { TStat } from "../Primary/Primary";
 import ServerConnect from "../../servie";
 import { Deployment } from '../../App';
+import { useTranslation } from 'react-i18next';
 
 const formatNumber = (n: number): string => {
   return Math.round(n).toLocaleString('en-US');
@@ -28,20 +29,20 @@ function formatTxHash(hash: string | undefined | null): string {
   return `${hash.substring(0, 4)}...${hash.substring(hash.length - 4)}`;
 }
 
-function formatTimestampAgo(timestamp: number): string {
+function formatTimestampAgo(timestamp: number, t: (key: string) => string): string {
   const now = new Date();
   const past = new Date(timestamp * 1000);
   const diffInSeconds = Math.floor((now.getTime() - past.getTime()) / 1000);
 
   if (diffInSeconds < 60) {
-    return "Just now";
+    return t('time.justNow');
   }
 
   const secondsInMinute = 60;
   const secondsInHour = 3600;
   const secondsInDay = 86400;
-  const secondsInMonth = 2592000;
-  const secondsInYear = 31536000;
+  const secondsInMonth = 2592000; // Assuming 30 days per month for simplicity
+  const secondsInYear = 31536000; // Assuming 365 days per year
 
   const years = Math.floor(diffInSeconds / secondsInYear);
   let remainingSeconds = diffInSeconds % secondsInYear;
@@ -59,27 +60,27 @@ function formatTimestampAgo(timestamp: number): string {
 
   let result = "";
   if (years > 0) {
-    result += `${years}y `;
-    if (months > 0) result += `${months}m `;
+    result += `${years}${t('time.yearUnit')} `;
+    if (months > 0) result += `${months}${t('time.monthUnit')} `;
   } else if (months > 0) {
-    result += `${months}m `;
-    if (days > 0) result += `${days}d `;
+    result += `${months}${t('time.monthUnit')} `;
+    if (days > 0) result += `${days}${t('time.dayUnit')} `;
   } else if (days > 0) {
-    result += `${days}d `;
-    if (hours > 0) result += `${hours}h `;
+    result += `${days}${t('time.dayUnit')} `;
+    if (hours > 0) result += `${hours}${t('time.hourUnit')} `;
   } else if (hours > 0) {
-    result += `${hours}h `;
-    if (minutes > 0) result += `${minutes}m `;
+    result += `${hours}${t('time.hourUnit')} `;
+    if (minutes > 0) result += `${minutes}${t('time.minuteUnit')} `;
   } else if (minutes > 0) {
-    result += `${minutes} min `;
+    result += `${minutes} ${t('time.minuteUnit')} `; // Space added before unit for "X min"
   }
 
   result = result.trim();
-  return result ? `${result} ago` : "Just now";
+  return result ? `${result} ${t('time.ago')}` : t('time.justNow');
 }
 
 export default function FeeM({ stats, deployments, setDeployments }: FeemProps) {
-
+  const { t } = useTranslation();
   const [hasMore, setHasMore] = useState<boolean>(true);
   const observer = useRef<IntersectionObserver | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -135,11 +136,11 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
 
   return (
     <section className={style.feem}>
-      <h1 className={style.title}>FeeM Dashboard</h1>
+      <h1 className={style.title}>{t('feem.title')}</h1>
       <div className={style.infoItems}>
         <div className={style.infoItem}>
           <img src={itemBg} className={style.infoItem__bg} alt="" />
-          <p className={style.infoItem__title}>All-time Earnings</p>
+          <p className={style.infoItem__title}>{t('feem.stats.allTimeEarnings')}</p>
           <p className={style.infoItem__count}>
             ${formatNumber(stats.gas_burnt_usd)}
           </p>
@@ -152,7 +153,7 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
         </div>
         <div className={style.infoItem}>
           <img src={itemBg} className={style.infoItem__bg} alt="" />
-          <p className={style.infoItem__title}>Current Treasury size</p>
+          <p className={style.infoItem__title}>{t('feem.stats.currentTreasurySize')}</p>
           <p className={style.infoItem__count}>
             ${formatNumber(stats.gas_burnt_usd - stats.deployments_usd)}
           </p>
@@ -165,7 +166,7 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
         </div>
         <div className={style.infoItem}>
           <img src={itemBg} className={style.infoItem__bg} alt="" />
-          <p className={style.infoItem__title}>All-time Deployments</p>
+          <p className={style.infoItem__title}>{t('feem.stats.allTimeDeployments')}</p>
           <p className={style.infoItem__count}>
             ${formatNumber(stats.deployments_usd)}
           </p>
@@ -188,7 +189,7 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
           className={style.wallet}
         >
           <div className={style.walletWrapper}>
-            <p className={style.walletTitle}>Treasury wallet:</p>
+            <p className={style.walletTitle}>{t('feem.wallets.treasuryTitle')}</p>
             <p className={style.walletAddress}>
               0xFC44Cc0702e72FCF0067b3b98779e5d6273c7e65
             </p>
@@ -202,7 +203,7 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
           window.open(`https://sonicscan.org/address/0x8888888888888888888888888888888888888888`)
         }} className={style.wallet}>
           <div className={style.walletWrapper}>
-            <p className={style.walletTitle}>Burn wallet:</p>
+            <p className={style.walletTitle}>{t('feem.wallets.burnTitle')}</p>
             <p className={style.walletAddress}>
               0x8888888888888888888888888888888888888888
             </p>
@@ -215,31 +216,29 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
         </div>
       </div>
       <div className={style.howWorks}>
-        <p className={style.howTitle}>{">"}HOW IT WORKS?</p>
+        <p className={style.howTitle}>{t('feem.howItWorks.title')}</p>
         <p className={style.howSubtitle}>
-          Every time someone mines INFINITY on&nbsp;Sonic, they pay a&nbsp;small
-          gas fee.&nbsp;90% of&nbsp;it&nbsp;flows into the FeeM treasury and
-          is&nbsp;instantly reinvested back into the ecosystem through:
+          {t('feem.howItWorks.subtitle')}
         </p>
         <div className={style.howListItem}>
           <img className={style.howListStar} src={star} alt="" />
-          <p className={style.howListText}>Market buybacks and burns</p>
+          <p className={style.howListText}>{t('feem.howItWorks.item1')}</p>
         </div>
         <div className={style.howListItem}>
           <img className={style.howListStar} src={star} alt="" />
           <p className={style.howListText}>
-            Voters Incentives to&nbsp;the Shadow pool to&nbsp;deepen liquidity
+            {t('feem.howItWorks.item2')}
           </p>
         </div>
       </div>
       <div className={style.tableWrapper}>
         <div className={style.table}>
           <div className={style.tableTop}>
-            <p className={style.tableTopText}>Date</p>
-            <p className={style.tableTopText}>Type</p>
-            <p className={style.tableTopText}>S</p>
-            <p className={style.tableTopText}>USD</p>
-            <p className={style.tableTopText}>Hash</p>
+            <p className={style.tableTopText}>{t('feem.table.header.date')}</p>
+            <p className={style.tableTopText}>{t('feem.table.header.type')}</p>
+            <p className={style.tableTopText}>{t('feem.table.header.s')}</p>
+            <p className={style.tableTopText}>{t('feem.table.header.usd')}</p>
+            <p className={style.tableTopText}>{t('feem.table.header.hash')}</p>
           </div>
           {deployments.map((deployment, index) => (
             <div
@@ -248,7 +247,7 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
               className={style.tableRow}
             >
               <p className={style.tableRowText}>
-                {formatTimestampAgo(deployment.timestamp)}
+                {formatTimestampAgo(deployment.timestamp, t)}
               </p>
               <div className={style.tableRowIconWrapper}>
                 <img
@@ -266,11 +265,11 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
                 />
                 <p className={style.tableRowIconText}>
                   {deployment.type === "INCENTIVES" ? (
-                    <>Shadow Incentive</>
+                    <>{t('feem.table.type.incentives')}</>
                   ) : deployment.type === "BUYBACK_N_BURN" ? (
-                    <>Buyback&nbsp;&amp;&nbsp;Burn</>
+                    <>{t('feem.table.type.buybackAndBurn')}</>
                   ) : deployment.type === "LP" ? (
-                    <>Add Liquidity</>
+                    <>{t('feem.table.type.lp')}</>
                   ) : (
                     ""
                   )}
@@ -302,7 +301,7 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
               </div>
             </div>
           ))}
-          {loading && <p className={style.loadingMore}>Loading more...</p>}
+          {loading && <p className={style.loadingMore}>{t('feem.table.loadingMore')}</p>}
         </div>
       </div>
     </section>

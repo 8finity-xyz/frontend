@@ -1,0 +1,9 @@
+project_id: "YOUR_CROWDIN_PROJECT_ID" # Replace with your actual Crowdin project ID later
+api_token_env: "CROWDIN_PERSONAL_TOKEN" # Environment variable for your API token
+base_path: "." # Project root
+
+files:
+  - source: /public/locales/en/translation.json
+    translation: /public/locales/%two_letters_code%/translation.json
+    # The %two_letters_code% placeholder will be replaced by Crowdin
+    # with the language code (e.g., fr, es). 

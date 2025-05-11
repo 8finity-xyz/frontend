@@ -40,7 +40,6 @@ function App() {
         setStats(data)
       })
       .catch(err => console.log(err))
-      .catch(err => console.log(err))
     setInterval(() => {
       ServerConnect.getStats()
         .then((data) => {

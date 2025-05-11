@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import PieChart from "../PieChart/PieChart";
@@ -11,7 +12,7 @@ import { useHover } from "../../store";
 Chart.register(CategoryScale);
 
 export default function Diagram() {
-
+  const { t } = useTranslation();
   const currentLabel = useHover((state) => state.label);
 
   const [isVisible, setIsVisible] = useState(false);
@@ -50,23 +51,23 @@ export default function Diagram() {
   return (
     <section ref={diagramRef} className={style.diagram}>
       <p className={style.diagramTitle}>
-        {">"}TOKENOMICS
+        {t('diagram.title')}
       </p>
       <div className={style.container}>
         <img className={style.leftShadow} src={leftShadow} alt="" />
         <div className={style.diagramInfoWrapper}>
           <div className={style.diagramWrapper}>
             <p className={`${style.percentLabel} ${style.percentLabelTr}`}>
-              10%
+              {t('diagram.percentTreasury')}
             </p>
             <p className={`${style.percentLabel} ${style.percentLabelLiq}`}>
-              20%
+              {t('diagram.percentLiquidity')}
             </p>
             <p className={`${style.percentLabel} ${style.percentLabelWag}`}>
-              24%
+              {t('diagram.percentWagmi')}
             </p>
             <p className={`${style.percentLabel} ${style.percentLabelMin}`}>
-              46%
+              {t('diagram.percentMining')}
             </p>
             {isVisible ? (
               <PieChart />
@@ -78,25 +79,25 @@ export default function Diagram() {
             <div style={{ transform: currentLabel == 'Treasury' ? 'translateX(5px)' : '' }} className={style.label}>
               <div style={{ width: '12px', height: '12px', background: currentLabel == 'Treasury' ? '#FFF' : '#005999' }}></div>
               <p className={style.labelText}>
-                Treasury
+                {t('diagram.labelTreasury')}
               </p>
             </div>
             <div style={{ transform: currentLabel == 'Liquidity' ? 'translateX(5px)' : '' }} className={style.label}>
               <div style={{ width: '12px', height: '12px', background: currentLabel == 'Liquidity' ? '#FFF' : '#0075CB' }}></div>
               <p className={style.labelText}>
-                Liquidity
+                {t('diagram.labelLiquidity')}
               </p>
             </div>
             <div style={{ transform: currentLabel == 'WAGMI Community' ? 'translateX(5px)' : '' }} className={style.label}>
               <div style={{ width: '12px', height: '12px', background: currentLabel == 'WAGMI Community' ? '#FFF' : '#3DADFF' }}></div>
               <p className={style.labelText}>
-                WAGMI Community
+                {t('diagram.labelWagmiCommunity')}
               </p>
             </div>
             <div style={{ transform: currentLabel == 'Mining rewards' ? 'translateX(5px)' : '' }} className={style.label}>
               <div style={{ width: '12px', height: '12px', background: currentLabel == 'Mining rewards' ? '#FFF' : '#70C3FF' }}></div>
               <p className={style.labelText}>
-                Mining rewards
+                {t('diagram.labelMiningRewards')}
               </p>
             </div>
           </div>
@@ -105,13 +106,13 @@ export default function Diagram() {
       </div>
       <div className={style.totalWrapper}>
         <p className={style.totalCount}>
-          88,888,888
+          {t('diagram.totalCount')}
         </p>
         <p className={style.totalText}>
-          Total supply
+          {t('diagram.totalText')}
         </p>
         <p className={style.more}>
-          Learn more about Infinity in the <a href="https://paragraph.com/@wagmi1337/infinity" className={style.moreLink} target="_blank">Manifesto</a>
+          {t('diagram.learnMoreText')}<a href="https://paragraph.com/@wagmi1337/infinity" className={style.moreLink} target="_blank">{t('diagram.learnMoreLink')}</a>
         </p>
       </div>
       <img src={separator} className={style.separator} alt="" />
