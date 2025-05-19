@@ -154,12 +154,12 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
           <img src={itemBg} className={style.infoItem__bg} alt="" />
           <p className={style.infoItem__title}>Current Treasury size</p>
           <p className={style.infoItem__count}>
-            ${formatNumber(stats.gas_burnt_usd - stats.deployments_usd)}
+            ${formatNumber(stats.treasury_size_usd)}
           </p>
           <div className={style.infoItem__numberWrapper}>
             <img className={style.infoItem__numberIcon} src={infoIcon} alt="" />
             <p className={style.infoItem__number}>
-              {formatNumber(stats.gas_burnt - stats.deployments)}
+              {formatNumber(stats.treasury_size)}
             </p>
           </div>
         </div>
@@ -167,12 +167,12 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
           <img src={itemBg} className={style.infoItem__bg} alt="" />
           <p className={style.infoItem__title}>All-time Deployments</p>
           <p className={style.infoItem__count}>
-            ${formatNumber(stats.deployments_usd)}
+            ${formatNumber(stats.gas_burnt_usd - stats.treasury_size_usd)}
           </p>
           <div className={style.infoItem__numberWrapper}>
             <img className={style.infoItem__numberIcon} src={infoIcon} alt="" />
             <p className={style.infoItem__number}>
-              {formatNumber(stats.deployments)}
+              {formatNumber(stats.gas_burnt - stats.treasury_size)}
             </p>
           </div>
         </div>

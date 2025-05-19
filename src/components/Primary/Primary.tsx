@@ -14,6 +14,8 @@ export type TStat = {
   holders_count: number,
   fdv_usd: number,
   hashrate: number,
+  treasury_size_usd: number,
+  treasury_size: number,
 }
 
 const formatNumber = (n: number): string => {

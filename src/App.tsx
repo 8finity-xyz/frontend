@@ -30,6 +30,8 @@ function App() {
     holders_count: 0,
     fdv_usd: 0,
     hashrate: 0,
+    treasury_size_usd: 0,
+    treasury_size: 0,
   })
 
   const [deployments, setDeployments] = useState<Deployment[]>([]);
