@@ -217,18 +217,16 @@ export default function FeeM({ stats, deployments, setDeployments }: FeemProps) 
       <div className={style.howWorks}>
         <p className={style.howTitle}>{">"}HOW IT WORKS?</p>
         <p className={style.howSubtitle}>
-          Every time someone mines INFINITY on&nbsp;Sonic, they pay a&nbsp;small
-          gas fee.&nbsp;90% of&nbsp;it&nbsp;flows into the FeeM treasury and
-          is&nbsp;instantly reinvested back into the ecosystem through:
+          Every time someone mines INFINITY on Sonic, they pay a small gas fee. 90% of it flows into the FeeM treasury and is reinvested back into the ecosystem through:
         </p>
         <div className={style.howListItem}>
           <img className={style.howListStar} src={star} alt="" />
-          <p className={style.howListText}>Market buybacks and burns</p>
+          <p className={style.howListText}>Market buybacks and burns to keep mining profitable</p>
         </div>
         <div className={style.howListItem}>
           <img className={style.howListStar} src={star} alt="" />
           <p className={style.howListText}>
-            Voters Incentives to&nbsp;the Shadow pool to&nbsp;deepen liquidity
+            Voters Incentives to the Shadow pool to deepen liquidity
           </p>
         </div>
       </div>
